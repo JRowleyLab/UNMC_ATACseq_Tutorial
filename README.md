@@ -1,2 +1,2 @@
 # rnaseq-myco-notebook
-Github for Google Tutorial
+Notebook to demonstrate how to run a snakemake RNA-Seq workflow
