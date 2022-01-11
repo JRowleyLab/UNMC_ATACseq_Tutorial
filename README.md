@@ -10,10 +10,11 @@ This short tutorial demonstrates how to run an RNA-Seq workflow using a prokaryo
 
 First install Mambaforge.
 
-
+```python
 !curl -L -O https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh
 !bash Mambaforge-$(uname)-$(uname -m).sh -b -u -p $HOME/mambaforge
 !export PATH="$HOME/mambaforge/bin:$PATH"
+```
 
 Next, install Trimmomatic using bioconda.
 
