@@ -1,151 +1,32 @@
-# RNA-Seq Analysis Training Demo
+# INBRE Google Cloud Training Tutorials
 
 ## Overview
 
-This short tutorial demonstrates how to run an RNA-Seq workflow using a prokaryotic data set. Steps in the workflow include read trimming, read QC, read mapping, and counting mapped reads per gene to quantitate gene expression.
+Included here are several tutorials in the form of 'Jupyter notebooks'.
 
-![RNA-Seq workflow](images/rnaseq-workflow.png)
+The purpose of these tutorials is to help users familiarize themselves with the Google Cloud environment in the specific context of running bioinformatics workflows.
 
-### STEP 1: Install Mambaforge and then install snakemake using bioconda.
+These tutorials do this by going step-by-step through specific workflows. These workflows cover the start to finish of basic bioinformatics analysis; starting from downloading raw sequence data, and extending to differential gene expression analysis, and producing common plots in R. 
 
-First install Mambaforge.
+## Workflows
 
-```python
-!curl -L -O https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh
-!bash Mambaforge-$(uname)-$(uname -m).sh -b -u -p $HOME/mambaforge
-!export PATH="$HOME/mambaforge/bin:$PATH"
-```
+![RNA-Seq workflow](images/RNA-Seq_Notebook_Homepage_Test.png)
 
-Next, install Trimmomatic using bioconda.
+Each notebook covers a specific workflow, and contains a written and visual summary at its head for further information. Access each tutorial for more information:
 
-```python
-!$HOME/mambaforge/bin/mamba install -y -c conda-forge -c bioconda trimmomatic
-!$HOME/mambaforge/bin/mamba install -y -c conda-forge -c bioconda fastqc
-!$HOME/mambaforge/bin/mamba install -y -c conda-forge -c bioconda multiqc
-!$HOME/mambaforge/bin/mamba install -y -c conda-forge -c bioconda salmon
-```
+[Workflow One:](training_demo_short.ipynb) A short introduction to downloading and mapping sequences to a transcriptome using Trimmomatic and Salmon.
 
-### STEP 2: Setup Environment
+[Workflow Two:](r_training_demo.ipynb) Using Deseq2 and R to conduct clustering and differential gene expression analysis.
 
-Create a set of directories to store the reads, reference sequence files, and output files.
-
-```python
-!cd $HOMEDIR
-!echo $PWD
-!mkdir -p data
-!mkdir -p data/raw_fastq
-!mkdir -p data/trimmed
-!mkdir -p data/fastqc
-!mkdir -p data/aligned
-!mkdir -p data/reference
-```
-
-### STEP 2: Copy FASTQ Files
-In order for this tutorial to run quickly, we will only analyze 50,000 reads from a sample from both sample groupsinstead of analyzing all the reads from all six samples. These files have been posted on a Google Storage Bucket that we made publicly accessible.
-
-```python
-!curl https://storage.googleapis.com/me-inbre-rnaseq-pipelinev2/data/raw_fastqSub/SRR13349122_1.fastq --output data/raw_fastq/SRR13349122_1.fastq
-!curl https://storage.googleapis.com/me-inbre-rnaseq-pipelinev2/data/raw_fastqSub/SRR13349122_2.fastq --output data/raw_fastq/SRR13349122_2.fastq
-!curl https://storage.googleapis.com/me-inbre-rnaseq-pipelinev2/data/raw_fastqSub/SRR13349128_1.fastq --output data/raw_fastq/SRR13349128_1.fastq
-!curl https://storage.googleapis.com/me-inbre-rnaseq-pipelinev2/data/raw_fastqSub/SRR13349128_2.fastq --output data/raw_fastq/SRR13349128_2.fastq
-```
-
-### STEP 3: Copy reference transcriptome files that will be used by Salmon
-Salmon is a tool that aligns RNA-Seq reads to a set of transcripts rather than the entire genome.
-
-```python
-!curl https://storage.googleapis.com/me-inbre-rnaseq-pipelinev2/data/reference/M_chelonae_transcripts.fasta --output data/reference/M_chelonae_transcripts.fasta
-!curl https://storage.googleapis.com/me-inbre-rnaseq-pipelinev2/data/reference/decoys.txt --output data/reference/decoys.txt
-```
-
-### STEP 4: Copy data file for Trimmomatic
-
-```python
-!curl https://storage.googleapis.com/me-inbre-rnaseq-pipelinev2/config/TruSeq3-PE.fa --output TruSeq3-PE.fa
-```
-
-### STEP 5: Run Trimmomatic
-Trimmomatic will trim off any adapter sequences or low quality sequence it detects in the FASTQ files.
-
-```python
-!trimmomatic PE -threads 2 data/raw_fastq/SRR13349122_1.fastq data/raw_fastq/SRR13349122_2.fastq data/trimmed/SRR13349122_1_trimmed.fastq data/trimmed/SRR13349122_2_trimmed.fastq data/trimmed/SRR13349122_1_trimmed_unpaired.fastq  data/trimmed/SRR13349122_2_trimmed_unpaired.fastq ILLUMINACLIP:TruSeq3-PE.fa:2:30:10:2:keepBothReads LEADING:3 TRAILING:3 MINLEN:36
-!trimmomatic PE -threads 2 data/raw_fastq/SRR13349128_1.fastq data/raw_fastq/SRR13349128_2.fastq data/trimmed/SRR13349128_1_trimmed.fastq data/trimmed/SRR13349128_2_trimmed.fastq data/trimmed/SRR13349128_1_trimmed_unpaired.fastq  data/trimmed/SRR13349128_2_trimmed_unpaired.fastq ILLUMINACLIP:TruSeq3-PE.fa:2:30:10:2:keepBothReads LEADING:3 TRAILING:3 MINLEN:36
-```
-
-### STEP 6: Run FastQC
-FastQC is an invaluable tool that allows you to evaluate whether there are problems with a set of reads. For example, it will provide a report of whether there is any bias in the sequence composition of the reads.
-
-```python
-!fastqc -o data/fastqc data/trimmed/SRR13349122_1_trimmed.fastq
-!fastqc -o data/fastqc data/trimmed/SRR13349128_1_trimmed.fastq
-```
+[Extended Workflow One:](training_demo_extended.ipynb) An extended version of workflow one. Once you have got your feet wet, you can retry workflow one with this extended version that covers the entire dataset, and includes elaboration such as using SRA tools for sequence downloading, and examples of running batches of fastq files through the pipeline. This workflow may take around an hour to run.
 
 
-### STEP 7: Run MultiQC
-MultiQC reads in the FastQQ reports and generate a compiled report for all the analyzed FASTQ files.
+## Requirements
 
-```python
-!multiqc -f data/fastqc
-```
+These piplines run entirely within the virtual machine environment of Google Cloud, and so should require nothing more than the ability to produce a virtual machine environment 'notebook' instance on the cloud. 
 
+We chose for the framework of our virtual machines the basic Python 3 framework, for flexibility.
 
-### STEP 8: Index the Transcriptome so that Trimmed Reads Can Be Mapped Using Salmon
+## Data
 
-```python
-!salmon index -t data/reference/M_chelonae_transcripts.fasta -p 8 -i data/reference/transcriptome_index --decoys data/reference/decoys.txt -k 31 --keepDuplicates
-```
-
-
-### STEP 9: Run Salmon to Map Reads to Transcripts and Quantify Expression Levels
-Salmon aligns the trimmed reads to the reference transcriptome and generates the read counts per transcript. In this analysis, each gene has a single transcript.
-
-```python
-!salmon quant -i data/reference/transcriptome_index -l SR -r data/trimmed/SRR13349122_1_trimmed.fastq -p 8 --validateMappings -o data/quants/SRR13349122_quant
-!salmon quant -i data/reference/transcriptome_index -l SR -r data/trimmed/SRR13349128_1_trimmed.fastq -p 8 --validateMappings -o data/quants/SRR13349128_quant
-```
-
-
-### STEP 10: Report the top 10 most highly expressed genes in the samples
-
-Top 10 most highly expressed genes in the wild-type sample.
-
-
-```python
-!sort -nrk 4,4 data/quants/SRR13349122_quant/quant.sf | head -10
-```
-
-
-Top 10 most highly expressed genes in the double lysogen sample.
-
-
-```python
-!sort -nrk 4,4 data/quants/SRR13349128_quant/quant.sf | head -10
-```
-
-
-### STEP 11: Report the expression of a putative acyl-ACP desaturase (BB28_RS16545) that was downregulated in the double lysogen relative to wild-type
-A acyl-transferase was reported to be downregulated in the double lysogen as shown in the table of the top 20 upregulated and downregulated genes from the paper describing the study.
-![RNA-Seq workflow](images/table-cushman.png)
-
-Use `grep` to report the expression in the wild-type sample. The fields in the Salmon `quant.sf` file are as follows. The level of expression is reported in the Transcripts Per Million (`TPM`) and number of reads (`NumReads`) fields:  
-`Name    Length  EffectiveLength TPM     NumReads`
-
-
-```python
-!grep 'BB28_RS16545' data/quants/SRR13349122_quant/quant.sf
-```
-
-
-Use `grep` to report the expression in the double lysogen sample. The fields in the Salmon `quant.sf` file are as follows. The level of expression is reported in the Transcripts Per Million (`TPM`) and number of reads (`NumReads`) fields:  
-`Name    Length  EffectiveLength TPM     NumReads`
-
-```python
-!grep 'BB28_RS16545' data/quants/SRR13349128_quant/quant.sf
-```
-
-
-### The next tutorial will focus on the analysis of the gene counts
-
-Now that you have read counts per gene, the next tutorial will show you the following workflow that is used to generate the list of differentially expressed genes.
-
-![RNA-Seq workflow](images/count-workflow.png)
+These tutorials use example sequence data procured from the Sally Molloy labratory here at University of Maine; which investigates the transcriptome change in prophage infected, versus non-prophage infected M. Chelonae bacteria. The respective article can be found <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8191103/">here</a>.
