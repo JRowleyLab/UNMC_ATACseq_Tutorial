@@ -10,7 +10,7 @@ These tutorials do this by going step-by-step through specific workflows. These 
 
 ## Workflows
 
-![RNA-Seq workflow](images/RNA-Seq_Notebook_Homepage_Test.png)
+![RNA-Seq workflow](images/RNA-Seq_Notebook_Homepage.png)
 
 Each notebook covers a specific workflow, and contains a written and visual summary at its head for further information. Access each tutorial for more information:
 
