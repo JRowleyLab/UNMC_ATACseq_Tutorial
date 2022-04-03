@@ -42,8 +42,6 @@ This repository contains several notebook files which serve as bioinformatics wo
 
 The below steps guide you through setting up a virtual machine on Google Cloud Platform to run these notebook files.
 
-![RNA-Seq workflow](images/home.png)
-
 ## Navigating to the Vertex AI Workbench
 
 Once a project has been selected, we can navigate to the Vertex AI Workbench, this is where we can make our virtual machine. 
