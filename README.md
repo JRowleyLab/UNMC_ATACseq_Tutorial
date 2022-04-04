@@ -35,7 +35,12 @@ We chose for the framework of our virtual machines the basic Python 3 framework,
 
 These tutorials use example sequence data procured from the Sally Molloy labratory here at University of Maine; which investigates the transcriptome change in prophage infected, versus non-prophage infected M. Chelonae bacteria. The respective article can be found <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8191103/">here</a>.
 
+## Funding
 
+Funded by NIH INBRE P20 GM103423
+
+
+#
 # Getting Started
 
 This repository contains several notebook files which serve as bioinformatics workflow tutorials.
