@@ -82,7 +82,7 @@ Note, when you are finished running code, you should turn off your virtual machi
 
 Now that you have created your virtual machine, and are in the Jupyterlab screen, you can run our tutorial files. But first you will need to download them.
 The easiest way to do this would probably be to clone our repository directly. This can be done by using the 'Git' menu in Jupyterlab, and selecting the clone option. 
-Next you can type in the link of repository: 'https://github.com/King-Laboratory/rnaseq-myco-notebook.git' and click 'Clone'. 
+Next you can type in the link of repository: "https://github.com/King-Laboratory/rnaseq-myco-notebook.git" (without quotation marks) and click 'Clone'. 
 
 This should download our repo, and the tutorial files inside, into a folder called 'rnaseq-myco-notebook', which you can now navigate to to run our tutorial files.
 
