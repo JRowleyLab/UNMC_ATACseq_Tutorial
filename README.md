@@ -66,9 +66,9 @@ Within the Vertex AI submenu, select 'Workbench'.
 
 Within the Workbench screen, Select the option to create a 'New Notebook'.
 
-For our tutorials, to create our notebook we used a virtual machine with the default Python 3 framework, and the default 4 vCPUS and 15GB RAM.
+Our notebooks include a notebook that uses R code, so check the 'R' framework. This will include Python as well as R compatibility. You can ignore the advanced options for now, and a default virtual machine will be created with 4 vCPUS and 15GB RAM.
 
-![RNA-Seq workflow](images/newnotebook.png)
+![RNA-Seq workflow](images/newnotebook2.png)
 
 ### Starting Your Virtual Machine
 
