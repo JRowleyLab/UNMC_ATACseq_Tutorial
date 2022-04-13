@@ -59,6 +59,8 @@ Once a project has been selected, we can navigate to the Vertex AI Workbench, th
 To get there, select the navigation menu, and navigate to 'Vertex AI' under the Artificial Intelligence section. 
 Within the Vertex AI submenu, select 'Workbench'.
 
+![RNA-Seq workflow](images/navigatecircle.png)
+
 
 ### Creating a Virtual Machine
 
@@ -66,12 +68,15 @@ Within the Workbench screen, Select the option to create a 'New Notebook'.
 
 For our tutorials, to create our notebook we used a virtual machine with the default Python 3 framework, and the default 4 vCPUS and 15GB RAM.
 
+![RNA-Seq workflow](images/newnotebook.png)
 
 ### Starting Your Virtual Machine
 
 To start your virtual machine by clicking 'Open Jupyerlab'. You will know it is running because of the green checkmark.
 
 Note, when you are finished running code, you should turn off your virtual machine to prevent unneeded billing or resource use by checking your notebook and pushing the 'Stop' button. 
+
+![RNA-Seq workflow](images/startingmachine.png)
 
 ### Downloading Tutorial Files
 
@@ -81,10 +86,14 @@ Next you can type in the link of repository: https://github.com/King-Laboratory/
 
 This should download our repo, and the tutorial files inside, into a folder called 'rnaseq-myco-notebook', which you can now navigate to to run our tutorial files.
 
+![RNA-Seq workflow](images/git.png)
+
 ### Running Tutorial Files
 
 All our tutorial workflows are are Jupyter format. To run them you need only to navigate to the workflow you want to run in the 'rnaseq-myco-notebook' folder, and double click.
 This will open the Jupyter file in Jupyter notebook. From here you can run each 'cell' of the code, one by one, by simplying pushing the 'Play' button on the above menu.
+
+![RNA-Seq workflow](images/runnotebook.png)
 
 ### Stopping Your Virtual Machine
 
