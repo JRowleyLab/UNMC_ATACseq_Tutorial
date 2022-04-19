@@ -5,7 +5,7 @@
 
 Included here are several tutorials in the form of 'Jupyter notebooks'.
 
-The purpose of these tutorials is to help users familiarize themselves with the cloud computing in the specific context of running bioinformatics workflows.
+The purpose of these tutorials is to help users familiarize themselves with the cloud computing in the specific context of running bioinformatics workflows. Here is a [link to a YouTube video that give you an overview of the tutorials][https://www.youtube.com/watch?v=dd6YzrTdoWs].
 
 These tutorials do this by going step-by-step through specific workflows. These workflows cover the start to finish of basic bioinformatics analysis; starting from downloading raw sequence data, and extending to differential gene expression analysis, and producing common plots in R.
 
@@ -28,7 +28,7 @@ These notebooks were designed to be run using a virtual machine on a cloud compu
 ![RNA-Seq workflow](images/RNA-Seq_Notebook_Homepage.png)
 
 
-[Workflow One:](training_demo_short.ipynb) A short introduction to downloading and mapping sequences to a transcriptome using Trimmomatic and Salmon.
+[Workflow One:](training_demo_short.ipynb) A short introduction to downloading and mapping sequences to a transcriptome using Trimmomatic and Salmon. Here is a [link to the YouTube video demonstrating the tutorial][https://www.youtube.com/watch?v=NG1U7D4l31o&t=26s].
 
 [Workflow One (Snakemake):](training_demo_snakemake.ipynb) Using snakemake to run workflow one.
 
