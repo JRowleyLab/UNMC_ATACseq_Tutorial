@@ -82,9 +82,9 @@ This will open the Jupyter file in Jupyter notebook. From here you can run each 
 
 Some 'cells' of code take longer for the computer to process than others. You will know a cell is running when a cell has an asterisk next to it \[\*\]. When the cell finishes running, that asterisk will be replaced with a number which represents the order that cell was run in.
 
-There are many more ways to use jupyter, including selecting multiple cells before hitting the play button in order to queue multiple cells at once.
+You can now explore the tutorials by running the code in each, from top to bottom. Look at the 'workflows' section below for a short description of each tutorial.
 
-You can now explore the tutorials by running the code in each, from top to bottom. Look at the 'workflows' section below for a short description of the tutorials.
+Jupyter is a powerful tool, with many useful features. For more information on how to use Jupyter, we recommend searching for Jupyter tutorials and literature online.
 
 
 ![RNA-Seq workflow](images/runnotebook.png)
