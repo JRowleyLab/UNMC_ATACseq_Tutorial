@@ -31,7 +31,11 @@ For more information on creating a virtual machine and downloading our github to
 
 This repository contains several notebook files which serve as bioinformatics workflow tutorials.
 
-The below steps guide you through setting up a virtual machine on Google Cloud Platform, downloading our tutorial files, and running those files.
+The below steps guide you through setting up a virtual machine on Google Cloud Platform, downloading our tutorial files, and running those files. 
+
+Accordingly, before starting, make sure you have a google account and have access to a Google Cloud Platform Project.
+
+Once you have these, you can begin by first navigating to https://console.cloud.google.com/ and logging in with your credentials. Then, in the top left of the screen, navigate to 'select a project', and choose the project you belong to.
 
 ### Navigating to the Vertex AI Workbench
 
@@ -46,7 +50,9 @@ Within the Vertex AI submenu, select 'Workbench'.
 
 Within the Workbench screen, Select the option to create a 'New Notebook'.
 
-Our notebooks include a notebook that uses R code, so check the 'R' framework. This will include Python as well as R compatibility. You can ignore the advanced options for now, and a default virtual machine will be created with 4 vCPUS and 15GB RAM.
+Our notebooks include a notebook that uses R code, so check the 'R' framework. This will include Python as well as R compatibility. You can then choose a name for your virutal machine, you can name it whatever you like, and preferably choose a server location closest to you. Ignore the advanced options for now, and a default virtual machine will be created. A default machine has 4 vCPUS and 15GB RAM.
+
+Creating a machine may take a few minutes to finish.
 
 ![RNA-Seq workflow](images/newnotebook2.png)
 
@@ -64,18 +70,22 @@ Now that you have created your virtual machine, and are in the Jupyterlab screen
 The easiest way to do this would probably be to clone our repository directly. This can be done by using the 'Git' menu in Jupyterlab, and selecting the clone option. 
 Next you can type in the link of repository: "https://github.com/King-Laboratory/rnaseq-myco-notebook.git" (without quotation marks) and click 'Clone'. 
 
-This should download our repo, and the tutorial files inside, into a folder called 'rnaseq-myco-notebook', which you can now navigate to to run our tutorial files.
+This should download our repo, and the tutorial files inside, into a folder called 'rnaseq-myco-notebook'. Double click this folder now. Inside you will find all our tutorial files, which you can double click and run.
 
 ![RNA-Seq workflow](images/git.png)
 
 ### Running Tutorial Files
 
-All our tutorial workflows are are Jupyter format. To run them you need only to navigate to the workflow you want to run in the 'rnaseq-myco-notebook' folder, and double click.
+All our tutorial workflows are are Jupyter format. To run them you need only to double click the tutorial file you want.
+
 This will open the Jupyter file in Jupyter notebook. From here you can run each section, or 'cell', of the code, one by one, by pushing the 'Play' button on the above menu. 
 
 Some 'cells' of code take longer for the computer to process than others. You will know a cell is running when a cell has an asterisk next to it \[\*\]. When the cell finishes running, that asterisk will be replaced with a number which represents the order that cell was run in.
 
 There are many more ways to use jupyter, including selecting multiple cells before hitting the play button in order to queue multiple cells at once.
+
+You can now explore the tutorials by running the code in each, from top to bottom. Look at the 'workflows' section below for a short description of the tutorials.
+
 
 ![RNA-Seq workflow](images/runnotebook.png)
 
