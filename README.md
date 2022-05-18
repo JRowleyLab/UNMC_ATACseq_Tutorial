@@ -91,7 +91,11 @@ This should download our repo, and the tutorial files inside, into a folder call
 ### Running Tutorial Files
 
 All our tutorial workflows are are Jupyter format. To run them you need only to navigate to the workflow you want to run in the 'rnaseq-myco-notebook' folder, and double click.
-This will open the Jupyter file in Jupyter notebook. From here you can run each 'cell' of the code, one by one, by simplying pushing the 'Play' button on the above menu.
+This will open the Jupyter file in Jupyter notebook. From here you can run each section, or 'cell', of the code, one by one, by pushing the 'Play' button on the above menu. 
+
+Some 'cells' of code take longer for the computer to process than others. You will know a cell is running when a cell has an asterisk next to it \[\*\]. When the cell finishes running, that asterisk will be replaced with a number which represents the order that cell was run in.
+
+There are many more ways to use jupyter, including selecting multiple cells before hitting the play button in order to queue multiple cells at once.
 
 ![RNA-Seq workflow](images/runnotebook.png)
 
