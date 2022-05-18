@@ -11,32 +11,12 @@ These tutorials do this by going step-by-step through specific workflows. These 
 
 ## Table of Contents
 
-<a href="#workflow">Workflows</a></br>
 <a href="#requirements">Requirements</a></br>
 <a href="#getting-started">Getting Started</a></br>
+<a href="#workflow">Workflows</a></br>
 <a href="#data">Data</a></br>
 <a href="#funding">Funding</a></br>
 </br>
-
-## <a name="workflow">Workflows</a>
-
-Our tutorials are broken down into 'workflows'. Each notebook file covers a specific workflow, which contains written and visual commentary, as well as the actual step-by-step code for running that workflow analysis. 
-
-These notebooks were designed to be run using a virtual machine on a cloud computing provider. For more information on how to do this; navigate to the <a href="#getting-started">'Getting Started'</a> section. You can easily navigate to each of the workflows below by clicking the appropriate link.
-
-
-![RNA-Seq workflow](images/RNA-Seq_Notebook_Homepage.png)
-
-
-[Workflow One:](training_demo_short.ipynb) A short introduction to downloading and mapping sequences to a transcriptome using Trimmomatic and Salmon. Here is a link to the YouTube video demonstrating the tutorial: <https://www.youtube.com/watch?v=NG1U7D4l31o&t=26s>.
-
-[Workflow One (Snakemake):](training_demo_snakemake.ipynb) Using snakemake to run workflow one.
-
-[Extended Workflow One:](training_demo_extended.ipynb) An extended version of workflow one. Once you have got your feet wet, you can retry workflow one with this extended version that covers the entire dataset, and includes elaboration such as using SRA tools for sequence downloading, and examples of running batches of fastq files through the pipeline. This workflow may take around an hour to run.
-
-[Workflow Two:](r_training_demo.ipynb) Using Deseq2 and R to conduct clustering and differential gene expression analysis.
-
-
 
 ## <a name="requirements">Requirements</a>
 
@@ -103,6 +83,23 @@ There are many more ways to use jupyter, including selecting multiple cells befo
 
 When you are finished running code, you can turn off your virtual machine to prevent unneeded billing or resource use by checking your notebook and pushing the 'Stop' button.
 
+## <a name="workflow">Workflows</a>
+
+Our tutorials are broken down into 'workflows'. Each notebook file covers a specific workflow, which contains written and visual commentary, as well as the actual step-by-step code for running that workflow analysis. 
+
+These notebooks were designed to be run using a virtual machine on a cloud computing provider. For more information on how to do this; navigate to the <a href="#getting-started">'Getting Started'</a> section. You can easily navigate to each of the workflows below by clicking the appropriate link.
+
+
+![RNA-Seq workflow](images/RNA-Seq_Notebook_Homepage.png)
+
+
+<strong>Workflow One:</strong> A short introduction to downloading and mapping sequences to a transcriptome using Trimmomatic and Salmon. Here is a link to the YouTube video demonstrating the tutorial: <https://www.youtube.com/watch?v=NG1U7D4l31o&t=26s>.
+
+<strong>Workflow One (Snakemake)</strong>: Using snakemake to run workflow one.
+
+<strong>Extended Workflow One:</strong> An extended version of workflow one. Once you have got your feet wet, you can retry workflow one with this extended version that covers the entire dataset, and includes elaboration such as using SRA tools for sequence downloading, and examples of running batches of fastq files through the pipeline. This workflow may take around an hour to run.
+
+<strong>Workflow Two:</strong> Using Deseq2 and R to conduct clustering and differential gene expression analysis.
 
 
 ## <a name="data">Data</a>
