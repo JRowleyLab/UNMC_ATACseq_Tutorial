@@ -117,6 +117,10 @@ These notebooks were designed to be run using a virtual machine on a cloud compu
 
 These tutorials use example sequence data procured from the Sally Molloy labratory here at University of Maine; which investigates the transcriptome change in prophage infected, versus non-prophage infected <I>M. chelonae</I> bacteria. The respective article can be found <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8191103/">here</a>.
 
+## <a name="forum">Support Forum Thanks</a>
+
+Support forum thanks. For almost any programming project, contributions to online databases and support forums are an invaluable resource that are heavily leaned upon. Thank goodness for those people who take the time to answer silly questions.
+
 ## <a name="funding">Funding</a>
 
 Funded by the Maine INBRE Program (NIH/NIGMS P20 GM103423).
