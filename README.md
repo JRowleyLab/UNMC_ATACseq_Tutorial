@@ -103,14 +103,14 @@ These notebooks were designed to be run using a virtual machine on a cloud compu
 ![RNA-Seq workflow](images/RNA-Seq_Notebook_Homepage.png)
 
 
-<strong>Workflow One:</strong> A short introduction to downloading and mapping sequences to a transcriptome using Trimmomatic and Salmon. Here is a link to the YouTube video demonstrating the tutorial: <https://www.youtube.com/watch?v=NG1U7D4l31o&t=26s>.
+<strong><a href="Tutorial_1.ipynb">Workflow One</a>:</strong> A short introduction to downloading and mapping sequences to a transcriptome using Trimmomatic and Salmon. Here is a link to the YouTube video demonstrating the tutorial: <https://www.youtube.com/watch?v=NG1U7D4l31o&t=26s>.
 
-<strong>Extended Workflow One (Extended):</strong> An extended version of workflow one. Once you have got your feet wet, you can retry workflow one with this extended version that covers the entire dataset, and includes elaboration such as using SRA tools for sequence downloading, and examples of running batches of fastq files through the pipeline. This workflow may take around an hour to run.
+<strong><a href="Tutorial_1B_Extended.ipynb">Extended Workflow One (Extended)</a>:</strong> An extended version of workflow one. Once you have got your feet wet, you can retry workflow one with this extended version that covers the entire dataset, and includes elaboration such as using SRA tools for sequence downloading, and examples of running batches of fastq files through the pipeline. This workflow may take around an hour to run.
 
 
-<strong>Workflow One (Using Snakemake)</strong>: Using snakemake to run workflow one.
+<strong><a href="Tutorial_2_Snakemake.ipynb">Workflow One (Using Snakemake)</a>:</strong> Using snakemake to run workflow one.
 
-<strong>Workflow Two (DEG Analysis):</strong> Using Deseq2 and R to conduct clustering and differential gene expression analysis.
+<strong><a href="Tutorial_3_DEG_Analysis.ipynb">Workflow Two (DEG Analysis)</a>:</strong> Using Deseq2 and R to conduct clustering and differential gene expression analysis.
 
 
 ## <a name="data">Data</a>
