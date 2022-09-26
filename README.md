@@ -1,5 +1,7 @@
 [comment]: <> (Hi. If you are seeing this message, please open this file with markdown preview or jupyter notebook. You can do this by right clicking on the readme file and picking 'open with'.)
-# INBRE Google Cloud Training Tutorials
+# An open-source interactive pipeline tutorial for differential ATAC-seq footprint analysis
+## INBRE Google Cloud Training Tutorials - ATAC-seq
+
 
 ## <a name="overview">Overview</a>
 
@@ -93,7 +95,7 @@ When you are finished running code, you can turn off your virtual machine to pre
 
 ## <a name="workflow">Workflows</a>
 
-Our tutorials are broken down into 'workflows'. These can be downloaded and run locally, or you can use cloud services outlined in this Readme. For example, these notebooks have been tested in google cloud using the VertexAIto run Jupyter Notebooks.
+Our tutorials are broken down into 'workflows'. These can be downloaded and run locally, or you can use cloud services outlined in this Readme. For example, these notebooks have been tested in google cloud using the VertexAI to run Jupyter Notebooks.
  
 ![ATAC-Seq workflow](images/vertexAIArchitecture.png)
 
@@ -101,7 +103,7 @@ Each notebook file covers a specific workflow, which contains written and visual
 
 ![ATAC-Seq workflow](images/DetailedArchitecture.png)
 
-These notebooks were designed to be run using a virtual machine on a cloud computing provider. For more information on how to do this; navigate to the <a href="#getting-started">'Getting Started'</a> section. Feel free to explore and run the workflows in any order you like. 
+For more information on how to run these in the cloud, navigate to the <a href="#getting-started">'Getting Started'</a> section. Feel free to explore ad use these workflows however works best for you. Each one builds from the previous tutorial, but they also can stand alone if you already know the concepts in the early ones. 
 
 
 ![ATAC-Seq workflow](images/ATACseqWorkflow.png)
@@ -118,6 +120,7 @@ These notebooks were designed to be run using a virtual machine on a cloud compu
 
 In this tutorial we will process a randomly chosen published dataset. This is available from GEO: GSE67382 Bao X, Rubin AJ, Qu K, Zhang J et al. A novel ATAC-seq approach reveals lineage-specific reinforcement of the open chromatin landscape via cooperation between BAF and p63. Genome Biol 2015 Dec 18;16:284. PMID: 26683334
 
+This dataset is paired-end 50 bp sequencing. We will analyze two samples representing NHEK cells with BAF depletion compared to a control. Note that to allow faster processing we have limited the reads to that of a specific region of chromosome 4.
 
 ## <a name="funding">Funding</a>
 
