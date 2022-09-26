@@ -5,9 +5,9 @@
 
 Included here are several tutorials in the form of 'Jupyter notebooks'.
 
-The purpose of these tutorials is to help users familiarize themselves with the cloud computing in the specific context of running bioinformatics workflows. Here is a link to a YouTube video that give you an overview of the tutorials: <https://www.youtube.com/watch?v=dd6YzrTdoWs>.
+The purpose of these tutorials is to help users familiarize themselves with the analysis steps for processing ATAC-seq data including considerations for single-end, paired-end or single-cell data.  
 
-These tutorials do this by going step-by-step through specific workflows. These workflows cover the start to finish of basic bioinformatics analysis; starting from downloading raw sequence data, and extending to differential gene expression analysis, and producing common plots in R.
+These tutorials do this by going step-by-step through specific workflows. These workflows cover the start to finish of basic bioinformatics analysis; starting from downloading raw sequence data, and extending to differential peak identification, genome annotation, and transcription factor footprinting, while producing common plots and visualizations.
 
 ## Table of Contents
 
@@ -43,18 +43,18 @@ Once a project has been selected, we can navigate to the Vertex AI Workbench, th
 To get there, select the navigation menu, and navigate to 'Vertex AI' under the Artificial Intelligence section. 
 Within the Vertex AI submenu, select 'Workbench'.
 
-![RNA-Seq workflow](images/navigatecircle.png)
+![ATAC-seq workflow](images/VertexAI.png)
 
 
 ### Creating a Virtual Machine
 
 Within the Workbench screen, Select the option to create a 'New Notebook'.
 
-Our notebooks include a notebook that uses R code, so check the 'R' framework. This will include Python as well as R compatibility. You can then choose a name for your virutal machine, you can name it whatever you like, and preferably choose a server location closest to you. Ignore the advanced options for now, and a default virtual machine will be created. A default machine has 4 vCPUS and 15GB RAM.
+Our notebooks use python. You can then choose a name for your virutal machine, you can name it whatever you like, and preferably choose a server location closest to you. Ignore the advanced options for now, and a default virtual machine will be created. A default machine has 4 vCPUS and 15GB RAM.
 
 Creating a machine may take a few minutes to finish.
 
-![RNA-Seq workflow](images/newnotebook2.png)
+![ATAC-Seq workflow](images/Workbenchr.png)
 
 ### Starting Your Virtual Machine
 
@@ -62,17 +62,17 @@ To start your virtual machine by clicking 'Open Jupyerlab'. You will know it is 
 
 Note, when you are finished running code, you should turn off your virtual machine to prevent unneeded billing or resource use by checking your notebook and pushing the 'Stop' button. 
 
-![RNA-Seq workflow](images/startingmachine.png)
+![ATAC-Seq workflow](images/StartStop.png)
 
 ### Downloading Tutorial Files
 
 Now that you have created your virtual machine, and are in the Jupyterlab screen, you can run our tutorial files. But first you will need to download them.
 The easiest way to do this would probably be to clone our repository directly. This can be done by using the 'Git' menu in Jupyterlab, and selecting the clone option. 
-Next you can type in the link of repository: "https://github.com/King-Laboratory/rnaseq-myco-notebook.git" (without quotation marks) and click 'Clone'. 
+Next you can type in the link of repository: "https://github.com/JRowleyLab/UNMC_ATACseqTutorial.git" (without quotation marks) and click 'Clone'. 
 
-This should download our repo, and the tutorial files inside, into a folder called 'rnaseq-myco-notebook'. Double click this folder now. Inside you will find all our tutorial files, which you can double click and run.
+This should download our repo, and the tutorial files inside, into a folder called 'ATACseq-notebook'. Double click this folder now. Inside you will find all our tutorial files, which you can double click and run.
 
-![RNA-Seq workflow](images/git.png)
+![ATAC-Seq workflow](images/git.png)
 
 ### Running Tutorial Files
 
@@ -87,7 +87,7 @@ You can now explore the tutorials by running the code in each, from top to botto
 Jupyter is a powerful tool, with many useful features. For more information on how to use Jupyter, we recommend searching for Jupyter tutorials and literature online.
 
 
-![RNA-Seq workflow](images/runnotebook.png)
+![ATAC-Seq workflow](images/runnotebook.png)
 
 ### Stopping Your Virtual Machine
 
