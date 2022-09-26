@@ -70,7 +70,7 @@ Now that you have created your virtual machine, and are in the Jupyterlab screen
 The easiest way to do this would probably be to clone our repository directly. This can be done by using the 'Git' menu in Jupyterlab, and selecting the clone option. 
 Next you can type in the link of repository: "https://github.com/JRowleyLab/UNMC_ATACseqTutorial.git" (without quotation marks) and click 'Clone'. 
 
-This should download our repo, and the tutorial files inside, into a folder called 'ATACseq-notebook'. Double click this folder now. Inside you will find all our tutorial files, which you can double click and run.
+This should download our repo, and the tutorial files inside, into a folder called 'UNMC_ATACseq_Tutorial'. Double click this folder now. Inside you will find all our tutorial files, which you can double click and run.
 
 ![ATAC-Seq workflow](images/git.png)
 
@@ -87,40 +87,38 @@ You can now explore the tutorials by running the code in each, from top to botto
 Jupyter is a powerful tool, with many useful features. For more information on how to use Jupyter, we recommend searching for Jupyter tutorials and literature online.
 
 
-![ATAC-Seq workflow](images/runnotebook.png)
-
 ### Stopping Your Virtual Machine
 
 When you are finished running code, you can turn off your virtual machine to prevent unneeded billing or resource use by checking your notebook and pushing the 'Stop' button.
 
 ## <a name="workflow">Workflows</a>
 
-Our tutorials are broken down into 'workflows'. Each notebook file covers a specific workflow, which contains written and visual commentary, as well as the actual step-by-step code for running that workflow analysis. 
+Our tutorials are broken down into 'workflows'. These can be downloaded and run locally, or you can use cloud services outlined in this Readme. For example, these notebooks have been tested in google cloud using the VertexAIto run Jupyter Notebooks.
+ 
+![ATAC-Seq workflow](images/vertexAIArchitecture.png)
+
+Each notebook file covers a specific workflow, which contains written and visual commentary, as well as the actual step-by-step code for running that workflow analysis. 
+
+![ATAC-Seq workflow](images/DetailedArchitecture.png)
 
 These notebooks were designed to be run using a virtual machine on a cloud computing provider. For more information on how to do this; navigate to the <a href="#getting-started">'Getting Started'</a> section. Feel free to explore and run the workflows in any order you like. 
 
 
-![RNA-Seq workflow](images/RNA-Seq_Notebook_Homepage.png)
+![ATAC-Seq workflow](images/ATACseqWorkflow.png)
 
 
-<strong><a href="Tutorial_1.ipynb">Workflow One</a>:</strong> A short introduction to downloading and mapping sequences to a transcriptome using Trimmomatic and Salmon. Here is a link to the YouTube video demonstrating the tutorial: <https://www.youtube.com/watch?v=NG1U7D4l31o&t=26s>.
+<strong><a href="ATACseq_Tutorial1_Preprocessing.ipynb">Tutorial One</a>:</strong> This short tutorial demonstrates the intial processing steps for ATAC-seq analysis. In this module we focus on generating quality reports of the fastq files, adapter trimming, mapping, and removal of PCR duplicates.
 
-<strong><a href="Tutorial_1B_Extended.ipynb">Extended Workflow One (Extended)</a>:</strong> An extended version of workflow one. Once you have got your feet wet, you can retry workflow one with this extended version that covers the entire dataset, and includes elaboration such as using SRA tools for sequence downloading, and examples of running batches of fastq files through the pipeline. This workflow may take around an hour to run.
+<strong><a href="ATACseq_Tutorial2_PeakDetection.ipynb">Tutorial Two</a>:</strong> In this section we will focus on visualization of the signal, create average plots of signal around transcription start sites (TSSs), and identification of peak signal.
 
-
-<strong><a href="Tutorial_2_Snakemake.ipynb">Workflow One (Using Snakemake)</a>:</strong> Using snakemake to run workflow one.
-
-<strong><a href="Tutorial_3_DEG_Analysis.ipynb">Workflow Two (DEG Analysis)</a>:</strong> Using Deseq2 and R to conduct clustering and differential gene expression analysis.
+<strong><a href="ATACseq_Tutorial3_Downstream.ipynb">Tutorial Three</a>:</strong> In this section we will focus on differential peak identification, motif footprinting, and annotation of nearby genomic features.
 
 
 ## <a name="data">Data</a>
 
-These tutorials use example sequence data procured from the Sally Molloy labratory here at University of Maine; which investigates the transcriptome change in prophage infected, versus non-prophage infected <I>M. chelonae</I> bacteria. The respective article can be found <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8191103/">here</a>.
+In this tutorial we will process a randomly chosen published dataset. This is available from GEO: GSE67382 Bao X, Rubin AJ, Qu K, Zhang J et al. A novel ATAC-seq approach reveals lineage-specific reinforcement of the open chromatin landscape via cooperation between BAF and p63. Genome Biol 2015 Dec 18;16:284. PMID: 26683334
 
-## <a name="forum">Support Forum Thanks</a>
-
-Support forum thanks. For almost any programming project, contributions to online databases and support forums are an invaluable resource that are heavily leaned upon. Thank goodness for those people who take the time to answer silly questions.
 
 ## <a name="funding">Funding</a>
 
-Funded by the Maine INBRE Program (NIH/NIGMS P20 GM103423).
+Funded by the INBRE Program (NIH/NIGMS P20 GM103427).
