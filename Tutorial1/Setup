@@ -1,0 +1,32 @@
+# ATAC-seq Module1: Preprocessing and Quality Control
+
+<img src="https://storage.googleapis.com/unmc_atac_data_examples/Tutorial1/images/ATACseqWorkflowLesson1.jpg" alt="Drawing" style="width: 1000px;"/>
+
+## Overview & Purpose
+This short tutorial demonstrates the intial processing steps for ATAC-seq analysis. In this module we focus on generating quality reports of the fastq files, adapter trimming, mapping, and removal of PCR duplicates.
+
+In this tutorial we will process a randomly chosen published dataset. This is available from GEO: [GSE67382](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE67382)
+Bao X, Rubin AJ, Qu K, Zhang J et al. A novel ATAC-seq approach reveals lineage-specific reinforcement of the open chromatin landscape via cooperation between BAF and p63. Genome Biol 2015 Dec 18;16:284. PMID: 26683334
+
+This dataset is paired-end 50 bp sequencing. We will analyze two samples representing NHEK cells with BAF depletion compared to a control. Note that to allow faster processing we have limited the reads to that of chromosome 4. 
+  
+### Required Files
+In this stage of the module you will use the fastq files that have been prepared. In step1 we will copy these files over to your instance. You can also use this module on your own data or any published ATAC-seq dataset. 
+
+<div class="alert-info" style="font-size:200%">
+STEP1: Setup Environment
+</div>
+
+Initial items to configure your google cloud environment. In this step we will use conda to install the following packages:
+
+Quality Reporting:
+[fastqc](https://anaconda.org/bioconda/fastqc), [multiqc](https://anaconda.org/bioconda/multiqc)
+
+Read Trimming: 
+[cutadapt](https://anaconda.org/bioconda/cutadapt), [trim-galore](https://anaconda.org/bioconda/trim-galore)
+
+Mapping:
+[bowtie2](https://anaconda.org/bioconda/bowtie2)
+
+Deduplication:
+[samtools](https://anaconda.org/bioconda/samtools), [picard](https://anaconda.org/bioconda/picard)
