@@ -74,7 +74,7 @@ Next you can type in the link of repository: "https://github.com/JRowleyLab/UNMC
 
 This should download our repo, and the tutorial files inside, into a folder called 'UNMC_ATACseq_Tutorial'. Double click this folder now. Inside you will find all our tutorial files, which you can double click and run.
 
-![ATAC-Seq workflow](images/git.png)
+![ATAC-Seq workflow](images/gitclone.png)
 
 ### Running Tutorial Files
 
